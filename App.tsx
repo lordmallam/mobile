@@ -1,14 +1,11 @@
 /**
  * AIS Viewer Mobile App
- * 
- * Main application component with Vessel Context Provider
- * and VesselMap component.
  */
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import { VesselProvider } from './src/contexts/VesselContext';
-import { VesselMap } from './src/components/VesselMap';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { VesselProvider } from "./src/contexts/VesselContext";
+import { VesselMap } from "./src/components/VesselMap";
 
 export default function App() {
   return (
@@ -16,6 +13,7 @@ export default function App() {
       <View style={styles.container}>
         <VesselMap />
         <StatusBar style="auto" />
+        <Text>Hello World</Text>
       </View>
     </VesselProvider>
   );
@@ -26,4 +24,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
