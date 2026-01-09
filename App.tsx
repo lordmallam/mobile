@@ -1,20 +1,29 @@
+/**
+ * AIS Viewer Mobile App
+ * 
+ * Main application component with Vessel Context Provider
+ * and VesselMap component.
+ */
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { VesselProvider } from './src/contexts/VesselContext';
+import { VesselMap } from './src/components/VesselMap';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <VesselProvider>
+      <View style={styles.container}>
+        <VesselMap />
+        <StatusBar style="auto" />
+      </View>
+    </VesselProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
+
