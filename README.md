@@ -2,6 +2,7 @@
 
 React Native mobile application for viewing vessel positions in real-time.
 
+
 ## Features
 
 - Mapbox map integration
